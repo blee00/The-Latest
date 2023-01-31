@@ -48,6 +48,7 @@ MVP:
 * container that will display articles (up to 5 - subject to change) 
 * Articles will have a "read more" which will just be a hyperlink which draws from the API's url element
 * CSS'd into the arrangement shown on the wireframes
+* Including hard requirements of part 8
 
 POST-MVP:
 
