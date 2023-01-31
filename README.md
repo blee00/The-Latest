@@ -87,8 +87,8 @@ getNews('us', 'science');
 
 Will be coding: Tues-Fri, maybe weekends if not finished during the week
 
-Pseudocoding, Design: 5-10 mins
-HTML: ~1 min
-CSS: 3 hrs
-JavaScript: 3 hrs
-Testing: Continuous process done thru out
+* Pseudocoding, Design: 5-10 mins
+* HTML: ~1 min
+* CSS: 3 hrs
+* JavaScript: 3 hrs
+* Testing: Continuous process done thru out
