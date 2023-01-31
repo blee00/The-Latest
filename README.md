@@ -1,7 +1,7 @@
 
 # APP TITLE: The Latest
 
-App Description: To provide users with the latest scoop; globalization has brought the world closer, making the stage smaller than ever. With a more connected world that changes quickly, it's important to stay in the loop with developments across the globe. 
+APP DESCRIPTION: To provide users with the latest scoop; globalization has brought the world closer, making the stage smaller than ever. With a more connected world that changes quickly, it's important to stay in the loop with developments across the globe. 
 
 API: The API I will be using is from newsapi.org. Here is a sample snippet of JSON: 
 
