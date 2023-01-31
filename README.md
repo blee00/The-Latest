@@ -7,6 +7,7 @@ API: The API I will be using is from newsapi.org. Here is a sample snippet of JS
 
 API SNIPPET: GET https://newsapi.org/v2/top-headlines?country=us&category=science&apikey=788f135045164f3ea26f71450c56861a
 
+``` json 
 {
   "status": "ok",
   "totalResults": 30,
@@ -23,15 +24,25 @@ API SNIPPET: GET https://newsapi.org/v2/top-headlines?country=us&category=scienc
       "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2023/01/sky-whirlpool-index.jpg?quality=75&strip=all&w=1024",
       "publishedAt": "2023-01-31T03:07:00Z",
       "content": "A mysterious spiral formation was spotted in the night sky above Hawaii earlier this month, sparking curiosity among observers.\r\nThe spectacle, initially spotted by an observatory in Mauna Kea on Jan… [+674 chars]"
-    },
+    }]
+ }
+ ``` 
+  
     
 API Code:
 
+``` javascript
 async function getNews(country, category) {
   const res = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apikey=788f135045164f3ea26f71450c56861a`)
   const json = await res.json();
   console.log(json);
 }
+```
+E.g.
+
+``` javascript
+getNews('us', 'science');
+```
 
 *Country & Category will have to be a hard coded array that is picked in a dropdown menu. 
 *The inputs will looke like 'us' 'science' for country and category, respectively.
