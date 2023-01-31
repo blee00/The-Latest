@@ -1,5 +1,5 @@
 
-# App Title: The Latest
+# APP TITLE: The Latest
 
 App Description: To provide users with the latest scoop; globalization has brought the world closer, making the stage smaller than ever. With a more connected world that changes quickly, it's important to stay in the loop with developments across the globe. 
 
@@ -24,8 +24,19 @@ API SNIPPET: GET https://newsapi.org/v2/top-headlines?country=us&category=scienc
       "publishedAt": "2023-01-31T03:07:00Z",
       "content": "A mysterious spiral formation was spotted in the night sky above Hawaii earlier this month, sparking curiosity among observers.\r\nThe spectacle, initially spotted by an observatory in Mauna Kea on Jan… [+674 chars]"
     },
-   
-Wireframes:
+    
+API Code:
+
+async function getNews(country, category) {
+  const res = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apikey=788f135045164f3ea26f71450c56861a`)
+  const json = await res.json();
+  console.log(json);
+}
+
+*Country & Category will have to be a hard coded array that is picked in a dropdown menu. 
+*The inputs will looke like 'us' 'science' for country and category, respectively.
+
+WIREFRAMES:
     
 <img width="803" alt="Screenshot 2023-01-31 at 1 00 06 AM" src="https://user-images.githubusercontent.com/114048369/215678951-b3f42fbd-0774-47af-930b-a7ec794d5caa.png">
 
@@ -52,11 +63,11 @@ GOALS:
 * Finalize MVP changes and proceed to POST-MVP
 * Background changing and decorated containers --> changing divs
 
-Priority Matrix:
+PRIORITY MATRIX:
 
 <img width="1068" alt="Screenshot 2023-01-31 at 1 35 47 AM" src="https://user-images.githubusercontent.com/114048369/215684835-f7c264b4-1971-4904-bef7-f5ec8bae3a30.png">
 
-Timeframes:
+TIMEFRAMES:
 
 Will be coding: Tues-Fri, maybe weekends if not finished during the week
 
