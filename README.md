@@ -52,7 +52,8 @@ getNews('us', 'science');
 
 ## WIREFRAMES:
     
-<img width="803" alt="Screenshot 2023-01-31 at 1 00 06 AM" src="https://user-images.githubusercontent.com/114048369/215678951-b3f42fbd-0774-47af-930b-a7ec794d5caa.png">
+<img width="778" alt="Screenshot 2023-01-31 at 1 00 06 AM" src="https://user-images.githubusercontent.com/114048369/215863861-a8a91fc5-2f9f-428b-9fe8-2af2a26af5a1.png">
+
 
 ## MVP: 
 
@@ -91,4 +92,4 @@ Will be coding: Tues-Fri, maybe weekends if not finished during the week
 * HTML: ~1 min
 * CSS: 3 hrs
 * JavaScript: 3 hrs
-* Testing: Continuous process done thru out
+* Testing: Continuous process done through out
