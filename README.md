@@ -45,7 +45,7 @@ getNews('us', 'science');
 ```
 
 *Country & Category will have to be a hard coded array that is picked in a dropdown menu. 
-*The inputs will looke like 'us' 'science' for country and category, respectively.
+*The inputs will look like 'us' 'science' for country and category, respectively.
 
 WIREFRAMES:
     
