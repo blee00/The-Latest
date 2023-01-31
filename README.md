@@ -5,7 +5,7 @@
 To provide users with the latest scoop; globalization has brought the world closer, making the stage smaller than ever. With a more connected world that changes quickly, it's important to stay in the loop with developments across the globe. 
 
 ## API: 
-The API I will be using is from newsapi.org. Here is a sample snippet of JSON: 
+The API I will be using is from newsapi.org. Here is a link to relevant documentation: https://newsapi.org/docs/endpoints/top-headlines
 
 ## API SNIPPET: 
 GET https://newsapi.org/v2/top-headlines?country=us&category=science&apikey=788f135045164f3ea26f71450c56861a
