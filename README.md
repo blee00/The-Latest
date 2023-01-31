@@ -1,11 +1,14 @@
 
 # APP TITLE: The Latest
 
-APP DESCRIPTION: To provide users with the latest scoop; globalization has brought the world closer, making the stage smaller than ever. With a more connected world that changes quickly, it's important to stay in the loop with developments across the globe. 
+## APP DESCRIPTION: 
+To provide users with the latest scoop; globalization has brought the world closer, making the stage smaller than ever. With a more connected world that changes quickly, it's important to stay in the loop with developments across the globe. 
 
-API: The API I will be using is from newsapi.org. Here is a sample snippet of JSON: 
+## API: 
+The API I will be using is from newsapi.org. Here is a sample snippet of JSON: 
 
-API SNIPPET: GET https://newsapi.org/v2/top-headlines?country=us&category=science&apikey=788f135045164f3ea26f71450c56861a
+## API SNIPPET: 
+GET https://newsapi.org/v2/top-headlines?country=us&category=science&apikey=788f135045164f3ea26f71450c56861a
 
 ``` json 
 {
@@ -29,7 +32,7 @@ API SNIPPET: GET https://newsapi.org/v2/top-headlines?country=us&category=scienc
  ``` 
   
     
-API Code:
+## API Code:
 
 ``` javascript
 async function getNews(country, category) {
@@ -47,27 +50,28 @@ getNews('us', 'science');
 *Country & Category will have to be a hard coded array that is picked in a dropdown menu. 
 *The inputs will look like 'us' 'science' for country and category, respectively.
 
-WIREFRAMES:
+## WIREFRAMES:
     
 <img width="803" alt="Screenshot 2023-01-31 at 1 00 06 AM" src="https://user-images.githubusercontent.com/114048369/215678951-b3f42fbd-0774-47af-930b-a7ec794d5caa.png">
 
-MVP: 
+## MVP: 
 
 * Country dropdown menu
 * Category dropdown menu
 * Submit button and event handler
-* container that will display articles (up to 5 - subject to change) 
-* Articles will have a "read more" which will just be a hyperlink which draws from the API's url element
+* Container that will display articles (up to 5 - subject to change)
+* Scrolling functionality which will detect max amount of links and then produce 5 more
+* Articles will have a "read more" which will be a hyperlink which draws from the API's url element
 * CSS'd into the arrangement shown on the wireframes
-* Including hard requirements of part 8
+* Include hard requirements of part 8
 
-POST-MVP:
+## POST-MVP:
 
 * Add an effect that mimics file cabin-esque browsing when moving between articles
-* background changes depending on the category, the moment the category and country are submitted, the bg will change
+* Background changes depending on the category, the moment the category and country are submitted, the bg will change
 * Make div containers more appealing like transparent globe around the app's main header
 
-GOALS:
+## GOALS:
 
 * Set all necessary html variables 
 * Develop JS functionality first, debug, troubleshoot, etc.
@@ -75,11 +79,11 @@ GOALS:
 * Finalize MVP changes and proceed to POST-MVP
 * Background changing and decorated containers --> changing divs
 
-PRIORITY MATRIX:
+## PRIORITY MATRIX:
 
 <img width="1068" alt="Screenshot 2023-01-31 at 1 35 47 AM" src="https://user-images.githubusercontent.com/114048369/215684835-f7c264b4-1971-4904-bef7-f5ec8bae3a30.png">
 
-TIMEFRAMES:
+## TIMEFRAMES:
 
 Will be coding: Tues-Fri, maybe weekends if not finished during the week
 
