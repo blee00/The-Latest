@@ -27,13 +27,12 @@ discover.addEventListener('click', async e => {
   display.innerHTML = '';
   for (let i = 0; i < 5; i++) {
     const a = document.createElement('a');
-    if (`${journals[i].author}` == 'null') {
-      a.innerText = `Title: ${journals[i].title}\n Author: N/A`;
+    if (`${journals[i].author}` === 'null') {
+      a.textContent = `Title: ${journals[i].title}\nAuthor: N/A`;
     } else {
-      a.innerText = `Title: ${journals[i].title}\n Author: ${journals[i].author}`;
+      a.textContent = `Title: ${journals[i].title}\nAuthor: ${journals[i].author}`;
     }
     a.href = `${journals[i].url}`;
-    // console.log(`Title: ${journals[i].title}\n Author: ${journals[i].author}`);
     display.append(a);
   };
   // prev.classList.remove('hidden');
@@ -42,24 +41,49 @@ discover.addEventListener('click', async e => {
 
 
 // The below code block displays the next set of news articles
+const size = 5;
+let current = 1;
+let newJournals = '';
 next.addEventListener('click', async e => {
   const journals = await getNews(`${countryDrop.value}`, `${categoryDrop.value}`);
-  console.log(journals);
+  if (current >= 1 && current < journals.length / size) {
+    current++;
+    newJournals = journals.slice(size * current - size, size * current);
+  }
+  console.log(newJournals);
   display.innerHTML = '';
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < newJournals.length; i++) {
     const a = document.createElement('a');
-    if (`${journals[i].author}` === 'null') {
-      a.innerText = `Title: ${journals[i + 5].title}\n Author: N/A`;
+    if (`${newJournals[i].author}` === 'null') {
+      a.textContent = `Title: ${newJournals[i].title}\nAuthor: N/A`;
     } else {
-      a.innerText = `Title: ${journals[i + 5].title}\n Author: ${journals[i + 5].author}`;
+      a.textContent = `Title: ${newJournals[i].title}\nAuthor: ${newJournals[i].author}`;
     }
-    a.href = `${journals[i + 5].url}`;
+    a.href = `${newJournals[i].url}`;
     display.append(a);
     prev.classList.remove('hidden');
   }
-}) // It stops at the second page, you'll see why
-
-// The below code block displats the prev set of news articles
+});
+// The below code block displays the prev set of news articles
+prev.addEventListener('click', async e => {
+  const journals = await getNews(`${countryDrop.value}`, `${categoryDrop.value}`);
+  if (current > 1) {
+    current--;
+    newJournals = journals.slice(size * current - size, size * current);
+  }
+  display.innerHTML = '';
+  for (let i = 0; i < newJournals.length; i++) {
+    const a = document.createElement('a');
+    if (`${newJournals[i].author}` === 'null') {
+      a.textContent = `Title: ${newJournals[i].title}\nAuthor: N/A`;
+    } else {
+      a.textContent = `Title: ${newJournals[i].title}\nAuthor: ${newJournals[i].author}`;
+    }
+    a.href = `${newJournals[i].url}`;
+    display.append(a);
+  }
+  // prev.classList.remove('hidden');
+})
 
 
 
