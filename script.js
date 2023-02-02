@@ -6,8 +6,10 @@ const category = ["business", "entertainment", "general", "health", "science", "
 
 const countryDrop = document.getElementById('countryDrop');
 const categoryDrop = document.getElementById('categoryDrop');
-const button = document.getElementById('discover');
+const discover = document.getElementById('discover');
 const display = document.getElementById('display');
+const prev = document.getElementById('Prev');
+const next = document.getElementById('Next');
 
 // The below code block extracts the info from the API
 async function getNews(country, category) {
@@ -19,18 +21,46 @@ async function getNews(country, category) {
 };
 
 // The below code block displays the requested data
-button.addEventListener('click', async e => {
+discover.addEventListener('click', async e => {
   const journals = await getNews(`${countryDrop.value}`, `${categoryDrop.value}`);
   console.log(journals);
   display.innerHTML = '';
   for (let i = 0; i < 5; i++) {
-    const p = document.createElement('p');
-    p.innerText = `${journals[i].title} ${journals[i].author} ${journals[i].url}`;
-    display.append(p);
+    const a = document.createElement('a');
+    if (`${journals[i].author}` == 'null') {
+      a.innerText = `Title: ${journals[i].title}\n Author: N/A`;
+    } else {
+      a.innerText = `Title: ${journals[i].title}\n Author: ${journals[i].author}`;
+    }
+    a.href = `${journals[i].url}`;
+    // console.log(`Title: ${journals[i].title}\n Author: ${journals[i].author}`);
+    display.append(a);
   };
-  // console.log(`${countryDrop.value}`);
-  // console.log(`${categoryDrop.value}`);
+  // prev.classList.remove('hidden');
+  next.classList.remove('hidden');
 });
+
+
+// The below code block displays the next set of news articles
+next.addEventListener('click', async e => {
+  const journals = await getNews(`${countryDrop.value}`, `${categoryDrop.value}`);
+  console.log(journals);
+  display.innerHTML = '';
+  for (let i = 0; i < 5; i++) {
+    const a = document.createElement('a');
+    if (`${journals[i].author}` === 'null') {
+      a.innerText = `Title: ${journals[i + 5].title}\n Author: N/A`;
+    } else {
+      a.innerText = `Title: ${journals[i + 5].title}\n Author: ${journals[i + 5].author}`;
+    }
+    a.href = `${journals[i + 5].url}`;
+    display.append(a);
+    prev.classList.remove('hidden');
+  }
+}) // It stops at the second page, you'll see why
+
+// The below code block displats the prev set of news articles
+
 
 
 // Code that translates text from whatever language it's in to english
