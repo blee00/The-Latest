@@ -3,7 +3,6 @@ const BASE_URL = "https://newsapi.org/v2/top-headlines?"
 
 const country = ["ae", "ar", "at", "au", "be", "bg", "br", "ca", "ch", "cn", "co", "cu", "cz", "de", "eg", "fr", "gb", "gr", "hk", "hu", "id", "ie", "il", "in", "it", "jp", "kr", "lt", "lv", "ma", "mx", "my", "ng", "nl", "no", "nz", "ph", "pl", "pt", "ro", "rs", "ru", "sa", "se", "sg", "si", "sk", "th", "tr", "tw", "ua", "us", "ve", "za"]
 const category = ["Business", "Entertainment", "General", "Health", "Science", "Sports", "Technology"]
-// const catImg = ["catImages/Stonks.jpg", "catImages/Entertainment.jpg", "catImages/General.jpg", "catImages/Health.jpg", "catImages/Sci.jpg", "catImages/Sports.jpg", "catImages/Tech.jpg"]
 
 
 const countryDrop = document.getElementById('countryDrop');
@@ -97,10 +96,9 @@ categoryDrop.addEventListener('change', async e => {
     if (e.target.value === category[i]) {
       while (classList.length > 0) {
         classList.remove(classList.item(0));
-      }
+      };
       document.body.classList.add(`${category[i]}`);
       console.log(classList);
-      // document.body.style.background = `url(${catImg[i]})`;
     };
   };
 });

@@ -5,62 +5,49 @@
 body,
 html {
   height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Category {
+  background-image: url("catImages/Newspaper.jpg");
+  height: 100%;
 }
 
 .Business {
   background-image: url("catImages/Stonks.jpg");
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .Entertainment {
   background-image: url("catImages/Entertainment.jpg");
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .General {
   background-image: url("catImages/General.jpg");
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .Health {
   background-image: url("catImages/Health.jpg");
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .Science {
   background-image: url("catImages/Sci.jpg");
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .Sports {
-  background-image: url("catImages/Sports.jpg");
+  background-image: url("catImages/Bjj.jpg");
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .Technology {
   background-image: url("catImages/Tech.jpg");
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #display {
@@ -72,6 +59,7 @@ html {
   max-width: 800px;
   min-height: 100px;
   margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.6)
 }
 
 #display a {
@@ -79,6 +67,7 @@ html {
   border: 1px solid black;
   margin: 15px;
   padding: 10px;
+  color: rgba(255, 255, 255, 1);
 }
 
 .hidden {
