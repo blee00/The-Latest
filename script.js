@@ -2,7 +2,9 @@ const API_KEY = "788f135045164f3ea26f71450c56861a"
 const BASE_URL = "https://newsapi.org/v2/top-headlines?"
 
 const country = ["ae", "ar", "at", "au", "be", "bg", "br", "ca", "ch", "cn", "co", "cu", "cz", "de", "eg", "fr", "gb", "gr", "hk", "hu", "id", "ie", "il", "in", "it", "jp", "kr", "lt", "lv", "ma", "mx", "my", "ng", "nl", "no", "nz", "ph", "pl", "pt", "ro", "rs", "ru", "sa", "se", "sg", "si", "sk", "th", "tr", "tw", "ua", "us", "ve", "za"]
-const category = ["business", "entertainment", "general", "health", "science", "sports", "technology"]
+const category = ["Business", "Entertainment", "General", "Health", "Science", "Sports", "Technology"]
+const catImg = ["catImages/Stonks.jpg", "catImages/Entertainment.jpg", "catImages/General.jpg", "catImages/Health.jpg", "catImages/Sci.jpg", "catImages/Sports.jpg", "catImages/Tech.jpg"]
+
 
 const countryDrop = document.getElementById('countryDrop');
 const categoryDrop = document.getElementById('categoryDrop');
@@ -28,9 +30,9 @@ discover.addEventListener('click', async e => {
   for (let i = 0; i < 5; i++) {
     const a = document.createElement('a');
     if (`${journals[i].author}` === 'null') {
-      a.textContent = `Title: ${journals[i].title}\nAuthor: N/A`;
+      a.innerText = `Title: ${journals[i].title}\nAuthor: N/A`;
     } else {
-      a.textContent = `Title: ${journals[i].title}\nAuthor: ${journals[i].author}`;
+      a.innerText = `Title: ${journals[i].title}\nAuthor: ${journals[i].author}`;
     }
     a.href = `${journals[i].url}`;
     display.append(a);
@@ -55,9 +57,9 @@ next.addEventListener('click', async e => {
   for (let i = 0; i < newJournals.length; i++) {
     const a = document.createElement('a');
     if (`${newJournals[i].author}` === 'null') {
-      a.textContent = `Title: ${newJournals[i].title}\nAuthor: N/A`;
+      a.innerText = `Title: ${newJournals[i].title}\nAuthor: N/A`;
     } else {
-      a.textContent = `Title: ${newJournals[i].title}\nAuthor: ${newJournals[i].author}`;
+      a.innerText = `Title: ${newJournals[i].title}\nAuthor: ${newJournals[i].author}`;
     }
     a.href = `${newJournals[i].url}`;
     display.append(a);
@@ -75,9 +77,9 @@ prev.addEventListener('click', async e => {
   for (let i = 0; i < newJournals.length; i++) {
     const a = document.createElement('a');
     if (`${newJournals[i].author}` === 'null') {
-      a.textContent = `Title: ${newJournals[i].title}\nAuthor: N/A`;
+      a.innerText = `Title: ${newJournals[i].title}\nAuthor: N/A`;
     } else {
-      a.textContent = `Title: ${newJournals[i].title}\nAuthor: ${newJournals[i].author}`;
+      a.innerText = `Title: ${newJournals[i].title}\nAuthor: ${newJournals[i].author}`;
     }
     a.href = `${newJournals[i].url}`;
     display.append(a);
@@ -86,8 +88,18 @@ prev.addEventListener('click', async e => {
 })
 
 
+// Code that changes background
+categoryDrop.addEventListener('change', async e => {
+  // console.log(e.target.value);
+  for (let i = 0; i < category.length; i++) {
+    if (e.target.value === category[i]) {
+      document.body.style.background = `url(${catImg[i]})`;
+    };
+  };
+});
 
-// Code that translates text from whatever language it's in to english
+
+// Code that translates text from whatever language to english
 async function googleTranslateElementInit() {
   new google.translate.TranslateElement({ pageLanguage: 'fy' }, 'google_translate_element');
 }
@@ -97,13 +109,13 @@ async function renderList() {
   for (let i = 0; i < country.length; i++) {
     const option = document.createElement('option');
     option.value = country[i];
-    option.textContent = country[i].toLocaleUpperCase();
+    option.innerText = country[i].toLocaleUpperCase();
     countryDrop.append(option);
   };
   for (let i = 0; i < category.length; i++) {
     const option = document.createElement('option');
     option.value = category[i];
-    option.textContent = category[i].toLocaleUpperCase();
+    option.innerText = category[i];
     categoryDrop.append(option);
   };
 };

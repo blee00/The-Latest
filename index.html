@@ -5,25 +5,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Latest</title>
+  <title class="notranslate">The Latest</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <h1 class="notranslate">The Latest</h1>
   <select class="notranslate" id="countryDrop">
-
+    <option selected="selected">Country</option>
   </select>
   <select class="notranslate" id="categoryDrop">
-
+    <option selected="selected">Category</option>
   </select>
   <button class="notranslate" id="discover">Discover</button>
   <div id="google_translate_element"></div>
   <div id="display"></div>
-
-  <!-- <div class="notranslate" id="btnhldr"> -->
-  <button class="notranslate hidden" id="Prev">Prev</button>
-  <button class="notranslate hidden" id="Next">Next</button>
+  <div id="btnhldr">
+    <div id="btn">
+      <button class="notranslate hidden" id="Prev">Prev</button>
+      <button class="notranslate hidden" id="Next">Next</button>
+    </div>
+  </div>
   <script src="script.js"></script>
   <script type="text/javascript"
     src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
