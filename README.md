@@ -61,7 +61,7 @@ getNews('us', 'science');
 * Category dropdown menu
 * Submit button and event handler
 * Container that will display articles (up to 5 - subject to change)
-* Scrolling functionality which will detect max amount of links and then produce 5 more
+* Page functionality -- Next and Prev button to change articles
 * Articles will have a "read more" which will be a hyperlink which draws from the API's url element
 * CSS'd into the arrangement shown on the wireframes
 * Include hard requirements of part 8
