@@ -1,6 +1,6 @@
 const API_KEY = "788f135045164f3ea26f71450c56861a"
-const BASE_URL = "https://newsapi.org/v2/top-headlines?"
-
+const PROXY = 'https://untitled-k7a5pa4az44r.runkit.sh'
+const BASE_URL = `${PROXY}/newsapi.org/v2/top-headlines?`
 const country = ["ae", "ar", "at", "au", "be", "bg", "br", "ca", "ch", "cn", "co", "cu", "cz", "de", "eg", "fr", "gb", "gr", "hk", "hu", "id", "ie", "il", "in", "it", "jp", "kr", "lt", "lv", "ma", "mx", "my", "ng", "nl", "no", "nz", "ph", "pl", "pt", "ro", "rs", "ru", "sa", "se", "sg", "si", "sk", "th", "tr", "tw", "ua", "us", "ve", "za"]
 const category = ["Business", "Entertainment", "General", "Health", "Science", "Sports", "Technology"]
 
@@ -29,11 +29,12 @@ discover.addEventListener('click', async e => {
   for (let i = 0; i < 5; i++) {
     const a = document.createElement('a');
     if (`${journals[i].author}` === 'null') {
-      a.innerText = `Title: ${journals[i].title}\nAuthor: N/A`;
+      a.innerText = `Title: ${journals[i].title}\nAuthor: N / A`;
     } else {
       a.innerText = `Title: ${journals[i].title}\nAuthor: ${journals[i].author}`;
     }
     a.href = `${journals[i].url}`;
+    a.target = "_blank";
     display.append(a);
   };
   // prev.classList.remove('hidden');
@@ -56,11 +57,12 @@ next.addEventListener('click', async e => {
   for (let i = 0; i < newJournals.length; i++) {
     const a = document.createElement('a');
     if (`${newJournals[i].author}` === 'null') {
-      a.innerText = `Title: ${newJournals[i].title}\nAuthor: N/A`;
+      a.innerText = `Title: ${newJournals[i].title}\nAuthor: N / A`;
     } else {
       a.innerText = `Title: ${newJournals[i].title}\nAuthor: ${newJournals[i].author}`;
     }
     a.href = `${newJournals[i].url}`;
+    a.target = "_blank";
     display.append(a);
     prev.classList.remove('hidden');
   }
@@ -77,11 +79,12 @@ prev.addEventListener('click', async e => {
   for (let i = 0; i < newJournals.length; i++) {
     const a = document.createElement('a');
     if (`${newJournals[i].author}` === 'null') {
-      a.innerText = `Title: ${newJournals[i].title}\nAuthor: N/A`;
+      a.innerText = `Title: ${newJournals[i].title}\nAuthor: N / A`;
     } else {
       a.innerText = `Title: ${newJournals[i].title}\nAuthor: ${newJournals[i].author}`;
     }
     a.href = `${newJournals[i].url}`;
+    a.target = "_blank";
     display.append(a);
   }
   // prev.classList.remove('hidden');

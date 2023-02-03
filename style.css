@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
 body,
 html {
   height: 100%;
@@ -54,12 +62,11 @@ html {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
-  position: relative;
-  top: 100px;
   max-width: 800px;
   min-height: 100px;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.6)
+    /* background-color: rgba(255, 255, 255, 0.6); */
 }
 
 #display a {
@@ -68,6 +75,7 @@ html {
   margin: 15px;
   padding: 10px;
   color: rgba(255, 255, 255, 1);
+  /* color: rgba(0, 0, 0, 1); */
 }
 
 .hidden {
