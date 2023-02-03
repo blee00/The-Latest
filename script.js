@@ -1,5 +1,5 @@
 const API_KEY = "788f135045164f3ea26f71450c56861a"
-const PROXY = 'https://untitled-k7a5pa4az44r.runkit.sh'
+const PROXY = "https://cors-proxy-k7a5pa4az44r.runkit.sh"
 const BASE_URL = `${PROXY}/newsapi.org/v2/top-headlines?`
 const country = ["ae", "ar", "at", "au", "be", "bg", "br", "ca", "ch", "cn", "co", "cu", "cz", "de", "eg", "fr", "gb", "gr", "hk", "hu", "id", "ie", "il", "in", "it", "jp", "kr", "lt", "lv", "ma", "mx", "my", "ng", "nl", "no", "nz", "ph", "pl", "pt", "ro", "rs", "ru", "sa", "se", "sg", "si", "sk", "th", "tr", "tw", "ua", "us", "ve", "za"]
 const category = ["Business", "Entertainment", "General", "Health", "Science", "Sports", "Technology"]
