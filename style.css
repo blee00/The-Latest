@@ -2,80 +2,106 @@
   text-align: center;
 }
 
+h1,
+h2 {
+  font-family: 'News Cycle', sans-serif;
+  text-shadow: 2px 2px #000;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 h1 {
-  font-size: 45px;
+  font-size: 75px;
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 55px;
 }
 
 body,
 html {
+  margin: 0;
   height: 100%;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   background-size: cover;
 }
 
 .Category {
   background-image: url("catImages/Newspaper.jpg");
-  height: 100%;
+  height: 100vh;
 }
 
 .Business {
   background-image: url("catImages/Stonks.jpg");
-  height: 100%;
+  height: 100vh;
 }
 
 .Entertainment {
   background-image: url("catImages/Entertainment.jpg");
-  height: 100%;
+  height: 100vh;
 }
 
 .General {
   background-image: url("catImages/General.jpg");
-  height: 100%;
+  height: 100vh;
 }
 
 .Health {
   background-image: url("catImages/Health.jpg");
-  height: 100%;
+  height: 100vh;
 }
 
 .Science {
   background-image: url("catImages/Sci.jpg");
-  height: 100%;
+  height: 100vh;
 }
 
 .Sports {
   background-image: url("catImages/Bjj.jpg");
-  height: 100%;
+  height: 100vh;
 }
 
 .Technology {
   background-image: url("catImages/Tech.jpg");
-  height: 100%;
+  height: 100vh;
+}
+
+#countryDrop,
+#categoryDrop,
+#google_translate_element,
+#discover {
+  font-size: 15px;
+  margin: 5px;
 }
 
 #display {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  max-width: 800px;
-  min-height: 100px;
+  border: 20px solid;
+  border-image: url("catImages/newsDisplay.jpeg") 30 round;
+  max-width: 1000px;
+  min-height: 400px;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.6)
-    /* background-color: rgba(255, 255, 255, 0.6); */
 }
 
 #display a {
   text-decoration: none;
-  border: 1px solid black;
+  border: 2px solid black;
   margin: 15px;
   padding: 10px;
   color: rgba(255, 255, 255, 1);
-  /* color: rgba(0, 0, 0, 1); */
+  font-size: 20px;
+  font-family: 'News Cycle', sans-serif;
+  transition: 0.5s;
+}
+
+#display a:hover {
+  border: 5px solid black;
+  font-size: 23px;
 }
 
 .hidden {
