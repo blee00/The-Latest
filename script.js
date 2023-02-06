@@ -16,7 +16,6 @@ const next = document.getElementById('Next');
 async function getNews(country, category) {
   const res = await fetch(`${BASE_URL}country=${country}&${category}&apikey=${API_KEY}`)
   const json = await res.json();
-  // console.log(json.articles);
   const journals = json.articles.map(({ title, author, url }) => ({ title, author, url }));
   return journals;
 };
@@ -24,7 +23,6 @@ async function getNews(country, category) {
 // The below code block displays the requested data
 discover.addEventListener('click', async e => {
   const journals = await getNews(`${countryDrop.value}`, `${categoryDrop.value}`);
-  console.log(journals);
   display.innerHTML = '';
   for (let i = 0; i < 5; i++) {
     const a = document.createElement('a');
@@ -37,7 +35,6 @@ discover.addEventListener('click', async e => {
     a.target = "_blank";
     display.append(a);
   };
-  // prev.classList.remove('hidden');
   next.classList.remove('hidden');
 });
 
@@ -93,7 +90,6 @@ prev.addEventListener('click', async e => {
 
 // Code that changes background
 categoryDrop.addEventListener('change', async e => {
-  // console.log(e.target.value);
   for (let i = 0; i < category.length; i++) {
     const classList = document.body.classList;
     if (e.target.value === category[i]) {
