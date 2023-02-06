@@ -64,7 +64,6 @@ getNews('us', 'science');
 * Page functionality -- Next and Prev button to change articles
 * Articles will have a "read more" which will be a hyperlink which draws from the API's url element
 * CSS'd into the arrangement shown on the wireframes
-* Include hard requirements of part 8
 
 ## POST-MVP:
 
