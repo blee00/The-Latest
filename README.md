@@ -57,30 +57,30 @@ getNews('us', 'science');
 
 ## MVP: 
 
-* Country dropdown menu
-* Category dropdown menu
-* Submit button and event handler
-* Container that will display articles (up to 5 - subject to change)
-* Page functionality -- Next and Prev button to change articles
-* Articles will have a "read more" which will be a hyperlink which draws from the API's url element
-* CSS'd into the arrangement shown on the wireframes
-* Include hard requirements of part 8
+- [x] Country dropdown menu
+- [x] Category dropdown menu
+- [x] Submit button and event handler
+- [x] Container that will display articles (up to 5 - subject to change)
+- [x] Page functionality -- Next and Prev button to change articles
+- [x] Articles will have a "read more" which will be a hyperlink which draws from the API's url element
+- [x] CSS'd into the arrangement shown on the wireframes
+- [x] Include hard requirements of part 8
 
 ## POST-MVP:
 
-* Add an effect that mimics file cabin-esque browsing when moving between articles
-* Background changes depending on the category, the moment the category and country are submitted, the bg will change
-* Make div containers more appealing like transparent globe around the app's main header
+- [x] Add an effect that mimics file cabin-esque browsing when moving between articles
+- [x] Background changes depending on the category, the moment the category and country are submitted, the bg will change
+- [] Make div containers more appealing like transparent globe around the app's main header
 
 ## GOALS:
 
-* Set all necessary html variables 
-* Develop JS functionality first, debug, troubleshoot, etc.
-* CSS basic arrangement i.e. flexbox, position, etc.
-* Finalize MVP changes and proceed to POST-MVP
-* Background changing and decorated containers --> changing divs
+- [x] Set all necessary html variables 
+- [x] Develop JS functionality first, debug, troubleshoot, etc.
+- [x] CSS basic arrangement i.e. flexbox, position, etc.
+- [x] Finalize MVP changes and proceed to POST-MVP
+- [x] Background changing and decorated containers --> changing divs
 
-## PRIORITY MATRIX:
+<!-- ## PRIORITY MATRIX:
 
 <img width="1068" alt="Screenshot 2023-01-31 at 1 35 47 AM" src="https://user-images.githubusercontent.com/114048369/215684835-f7c264b4-1971-4904-bef7-f5ec8bae3a30.png">
 
@@ -92,4 +92,4 @@ Will be coding: Tues-Fri, maybe weekends if not finished during the week
 * HTML: ~1 min
 * CSS: 3 hrs
 * JavaScript: 3 hrs
-* Testing: Continuous process done through out
+* Testing: Continuous process done through out -->
