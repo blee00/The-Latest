@@ -57,6 +57,7 @@ getNews('us', 'science');
 
 ## MVP: 
 
+<<<<<<< HEAD
 - [x] Country dropdown menu
 - [x] Category dropdown menu
 - [x] Submit button and event handler
@@ -65,6 +66,15 @@ getNews('us', 'science');
 - [x] Articles will have a "read more" which will be a hyperlink which draws from the API's url element
 - [x] CSS'd into the arrangement shown on the wireframes
 - [x] Include hard requirements of part 8
+=======
+* Country dropdown menu
+* Category dropdown menu
+* Submit button and event handler
+* Container that will display articles (up to 5 - subject to change)
+* Page functionality -- Next and Prev button to change articles
+* Articles will have a "read more" which will be a hyperlink which draws from the API's url element
+* CSS'd into the arrangement shown on the wireframes
+>>>>>>> 082dc60c9cbf9263d0563b874d08aef6d4a7ef67
 
 ## POST-MVP:
 
